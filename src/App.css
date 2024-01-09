@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  /* outline: 1px solid red; */
+}
+#header {
+  animation: header 1s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  
+}
+@keyframes header {
+  from {left: -100px;}
+  to {left: 0;}
+}
+
+#text-home{
+  animation: home 1s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+}
+@keyframes home {
+  from {top: -200px;}
+  to {top: 0;}
+}
+#nav{
+  animation: nav 1s;
+  animation-timing-function: ease-out;
+  position: relative;
+}
+@keyframes nav {
+  from {top: -200px;}
+  to {top: 0;}
+}
+
+td, tr, th {
+  border: 2px solid white;
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
