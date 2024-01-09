@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Paradise-Website/static/css/main.55f4fb36.css",
+    "main.js": "/Paradise-Website/static/js/main.52d62396.js",
+    "index.html": "/Paradise-Website/index.html",
+    "main.55f4fb36.css.map": "/Paradise-Website/static/css/main.55f4fb36.css.map",
+    "main.52d62396.js.map": "/Paradise-Website/static/js/main.52d62396.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55f4fb36.css",
+    "static/js/main.52d62396.js"
+  ]
+}
