@@ -10,7 +10,7 @@ const Header = () => {
             <div  className='flex items-center justify-center'>
                 <img className='w-[40px] md:w-[70px] mx-2 sm:mx-5' src="images/logo.png" alt="" />
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col text-center'>
                 <div className='flex items-center justify-center mt-5'>
                     <h1 className='text-[10px] sm:text-sm md:text-md lg:text-lg font-semibold font-Poppins'>PARADISE HILLS AND MOUNTAIN</h1>
                 </div>
@@ -41,13 +41,15 @@ const Header = () => {
         {/* {side-drawer} */}
         <div className={ nav ? 'fixed top-0 right-0 w-[300px] h-screen bg-white z-10 duration-300' : 'hidden'}>
             <FaArrowRight onClick = {() => setNav(!nav)} size={20} className='absolute right-4 top-4 cursor-pointer' />
-            <h2 className='text-xl p-4 font-semibold'>RESORT</h2>
+            <h2 className='text-xl p-4 font-semibold'>MENU</h2>
             <nav className=' flex items-center justify-center mt-5'>
                 <ul>
-                    <li className='mb-5 text-md font-medium hover:bg-gray-200 px-5'><a className=' text-black   py-2 flex' href="#home">HOME</a></li>
-                    <li className='mb-5 text-md font-medium hover:bg-gray-200 px-5'><a className=' text-black   py-2 flex' href="#about"> ABOUT</a></li>
-                    <li className='mb-5 text-md font-medium hover:bg-gray-200 px-5'><a className=' text-black   py-2 flex' href="#rates"> RATES</a></li>
+                    <li className='mb-5 text-md font-semibold hover:bg-gray-200 px-7'><a className=' text-black   py-2 flex' href="#home">HOME</a></li>
+                    <li className='mb-5 text-md font-semibold hover:bg-gray-200 px-7'><a className=' text-black   py-2 flex' href="#about"> ABOUT</a></li>
+                    <li className='mb-5 text-md font-semibold hover:bg-gray-200 px-7'><a className=' text-black   py-2 flex' href="#rates"> RATES</a></li>
+                    <button className='px-3 py-2 bg-green-400 rounded-md text-[1rem]'><a href="#booking">BOOK NOW</a></button>
                 </ul>
+
             </nav>
         </div>
     </div>

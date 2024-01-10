@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { FaFacebook } from 'react-icons/fa';
+import axios from 'axios';
 
 
 const Book = () => {
+  const [first, setfirst] = useState("");
+  const [last, setlast] = useState("");
+  const [email, setemail] = useState("");
+  const [mobile, setmobile] = useState("");
+  const [date, setdate] = useState("");
+
+
+  const handleSubmit = () => {
+    if(first.length === 0) {
+      alert("First has left blank!");
+    }
+    else if (last.length === 0) {
+      alert("Last has left blank!");
+    }
+    else if (email.length === 0) {
+      alert("Email has left blank!");
+    }
+    else if (mobile.length === 0) {
+      alert("Phone number has left blank!");
+    }
+    else if (date.length === 0) {
+      alert("Date has left blank!");
+    }
+    else {
+      const url = 'http://localhost/components/Book.php';
+      let fData = new FormData();
+      fData.append('first', first);
+      fData.append('last', last);
+      fData.append('email', email);
+      fData.append('mobile', mobile);
+      fData.append('date', date);
+      axios.post(url, fData).then(response=> alert(response.data)).catch(error=> alert(error));
+    }
+  }
   return (
     <div id="booking" className='flex flex-col justify-center items-center gap-10 py-10 lg:py-[10vh] bg-green-500'>
       <div className='flex flex-col w-full items-center'>
@@ -11,10 +46,12 @@ const Book = () => {
             <label className='w-full flex flex-col gap-3'>
               <h1 className='text-center'>Personal Information</h1>
               <div className='flex flex-col gap-3'>
-                <input type="text" placeholder="First Name" className='p-2 border rounded-md' />
-                <input type="text" placeholder="Last Name" className='p-2 border rounded-md' />
-                <input type="email" placeholder="Email" className='p-2 border rounded-md' />
-                <input type="text" placeholder="Phone number" className='p-2 border rounded-md' />
+                <input type="text" placeholder="First Name" className='p-2 border rounded-md' name='first' id='first' value={first} onChange={(e) => setfirst(e.target.value)} />
+                <input type="text" placeholder="Last Name" className='p-2 border rounded-md' name='last' id='last' value={last} onChange={(e) => setlast(e.target.value)} />
+                <input type="email" placeholder="Email" className='p-2 border rounded-md' name='email' id='email' value={email} onChange={(e) => setemail(e.target.value)} />
+                <input type="text" placeholder="Phone number" className='p-2 border rounded-md' name='mobile' id='mobile' value={mobile} onChange={(e) => setmobile(e.target.value)} />
+                <h1 className='text-center'>Date of Arrival</h1>
+                <input type="date" placeholder="Time of Arrival" className='p-2 border rounded-md' name='date' id='date' value={date} onChange={(e) => setdate(e.target.value)} />
               </div>
               <hr />
               <h1 className='text-center'>Form</h1>
@@ -36,7 +73,7 @@ const Book = () => {
                   <option value="4">4</option>
                 </select>
               </div>
-              <button className='text-white text-xl font-semibold bg-green-800 px-3 py-2 rounded-lg hover:bg-white hover:text-green-600 duration-300 mt-5'>BOOK NOW</button>
+              <button className='text-white text-xl font-semibold bg-green-800 px-3 py-2 rounded-lg hover:bg-white hover:text-green-600 duration-300 mt-5' onClick={handleSubmit} >BOOK NOW</button>
               <p className='text-center'>Enjoy your day!</p>
             </label>
           </form>

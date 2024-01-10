@@ -19,8 +19,8 @@ const Page1 = () => {
                 <div className='flex gap-2 sm:gap-5 items-center justify-center'>
                     <h4 onClick={() => setgallery(data)} className=' bg-green-400 cursor-pointer text-[12px] md:text-sm  px-3 py-2 rounded-lg font-semibold hover:text-white' >ALL</h4>
                     <h4 onClick={() => filterType('Pool')} className='bg-green-400  cursor-pointer text-[12px]  md:text-sm px-3 py-2 rounded-lg font-semibold hover:text-white'>ADULT</h4>
-                    <h4 onClick={() => filterType('kPool')} className='bg-green-400  cursor-pointer text-[12px]  md:text-sm px-3 py-2 rounded-lg font-semibold hover:text-white' >KIDS</h4>
-                    <h4 onClick={() => filterType('Cottage')} className='bg-green-400  cursor-pointer text-[12px]  md:text-sm px-3 py-2 rounded-lg font-semibold hover:text-white' >COTTAGE</h4>
+                    <h4 onClick={() => filterType('kPool')} className='bg-green-400  cursor-pointer text-[12px]  md:text-sm sm:px-3 sm:py-2 rounded-lg font-semibold hover:text-white' >KIDS</h4>
+                    <h4 onClick={() => filterType('Cottage')} className='bg-green-400  cursor-pointer text-[12px]  md:text-sm sm:px-3 sm:py-2 rounded-lg font-semibold hover:text-white' >COTTAGE</h4>
 
                 </div>
             </div>
